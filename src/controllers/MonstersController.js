@@ -7,7 +7,7 @@ class MonstersController {
     // Visualização de Monsters
     async read (req, resp) {
         Monsters.getTodos(function (erro, retorno) {
-            let resposta = new RepostaClass();        
+            let resposta = new RepostaClass();
             if (erro) {
                 resposta.erro = true;
                 resposta.msg = "Ocorreu um erro.";
