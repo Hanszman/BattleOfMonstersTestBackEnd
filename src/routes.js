@@ -8,8 +8,9 @@ const BattleController = require('./controllers/BattleController');
 routes.get('/', (req, res) => { // Rota de Teste
     return res.send('Hello World!');
 });
-routes.get('/monsters/:id', MonstersController.read); // Rota de Read do Monsters
-routes.post('/battle', BattleController.create); // Rota de Create do Battle
+routes.get('/monsters', MonstersController.readAll); // Rota de readAll do Monsters
+routes.get('/monsters/:id', MonstersController.readId); // Rota de readId do Monsters
+routes.post('/battle', BattleController.create); // Rota de create do Battle
 
 // Exportação
 module.exports = routes;

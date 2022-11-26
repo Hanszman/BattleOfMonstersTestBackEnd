@@ -28,7 +28,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Utilizando arquivo de rotas
-app.use(require('./routes'));
+app.use(require('./src/routes'));
+console.log('Executando localhost')
 
 // Execução da Aplicação na Porta 3333 utilizando o server do socket.io
 server.listen(process.env.PORT || 3333);
