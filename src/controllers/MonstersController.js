@@ -19,21 +19,6 @@ class MonstersController {
             resp.json(resposta);
         });
     }
-
-    async readId (req, resp) {
-        Monsters.getId(req.params.id, function (erro, retorno) {
-            let resposta = new RepostaClass();
-            if (erro) {
-                resposta.erro = true;
-                resposta.msg = "Ocorreu um erro.";
-                console.log('erro: ', erro);
-            }
-            else {
-               resposta.dados = retorno; 
-            }
-            resp.json(resposta);
-        });
-    }
 }
 
 // Exportação
