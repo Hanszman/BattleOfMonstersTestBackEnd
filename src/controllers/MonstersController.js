@@ -5,7 +5,7 @@ const RepostaClass = require('./RespostaClass');
 // Classe do Controller
 class MonstersController {
     // Visualização de Monsters
-    async readAll (req, resp) {
+    async read (req, resp) {
         Monsters.getTodos(function (erro, retorno) {
             let resposta = new RepostaClass();        
             if (erro) {
